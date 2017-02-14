@@ -10,6 +10,7 @@ app = Flask(__name__)
 def generate_word():
     word = get_word()
     return '''
+    <!doctype html>
     <html>
         <head>
             <title>Random Words and Sentences</title>
@@ -24,6 +25,7 @@ def generate_word():
 def generate_sentence(num):
     sentence = get_sentence(num)
     return '''
+    <!doctype html>
     <html>
         <head>
             <title>Random Words and Sentences</title>
