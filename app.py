@@ -1,9 +1,9 @@
-import application
+import randomWordDictionary
 
 from flask import Flask
 app = Flask(__name__)
 
-from application import full_sentence
+from randomWordDictionary import full_sentence
 print full_sentence
 
 @app.route('/')

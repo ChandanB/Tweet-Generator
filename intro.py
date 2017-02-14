@@ -1,7 +1,7 @@
 import random
 import sys
 
-
+#3
 def random_argument():
     random_index = random.randint(1, len(sys.argv) - 1)
     return sys.argv[random_index]

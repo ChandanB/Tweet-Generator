@@ -9,9 +9,10 @@ story_split    = story_stripped.split()
 user_input     = sys.argv[1]
 dict_as_unique_word = dict()
 
+#2
 def unique_words(histogram):
     return len(histogram)
-
+#7
 def histogram(source_text):
     for word_index in range(1, len(source_text)):
         current_word = story_split[word_index]
@@ -19,7 +20,7 @@ def histogram(source_text):
             dict_as_unique_word.update({current_word : 1})
         elif current_word in dict_as_unique_word:
             dict_as_unique_word[current_word] += 1
-
+#8
 def frequency(user_input):
     if user_input in dict_as_unique_word:
         if str(dict_as_unique_word[user_input]) is "1":
@@ -28,7 +29,7 @@ def frequency(user_input):
             print(user_input + " appears " + str(dict_as_unique_word[user_input]) + " times")
     else:
         print(user_input + " appears 0 times")
-
+#5
 if __name__ == '__main__':
     count = str(user_input)
     histogram(story_split)
