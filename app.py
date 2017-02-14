@@ -1,5 +1,5 @@
-from randomWordDictionary import get_sentence
-from randomWordDictionary import get_word
+from stoch_samp import get_sentence
+from stoch_samp import random_word
 from flask import Flask
 import os
 
@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def generate_word():
+def random_word():
     word = get_word()
     return '''
     <!doctype html>

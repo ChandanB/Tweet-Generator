@@ -5,7 +5,8 @@ import random
 
 outcome_for = {}
 user_input  = sys.argv[1]
-dict = open('/Users/ChandanB/Library/Mobile Documents/com~apple~CloudDocs/Finesse Fulfilled/Tweet-Generator/fish.txt', 'r')
+sentence   = []
+dict = open('Bible.txt', 'r')
 text = dict.read()
 dict.close()
 
@@ -34,8 +35,17 @@ def random_word(histogram):
                 outcome_for[word] = 1
             return word
 
+def get_sentence(count):
+    for i in range(count):
+        new_word = random_word()
+        word = new_word.strip()
+        sentence.append(word)
+    full_sentence = ' '.join(sentence)
+    return full_sentence
+
 if __name__ == "__main__":
-    word = str(user_input)
+    count = str(user_input)
+    random_sentence = get_sentence(count)
     hist_dict = histogram(text)
     for number in range(1, 100000):
         random_word(hist_dict)

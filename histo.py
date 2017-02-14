@@ -2,7 +2,7 @@ import sys
 import string
 from operator import itemgetter
 
-words_file = open('/Users/ChandanB/Library/Mobile Documents/com~apple~CloudDocs/Finesse Fulfilled/Tweet-Generator/Bible.txt')
+words_file = open('Bible.txt')
 story = str(words_file.read())
 story_stripped = story.translate(None, string.punctuation)
 story_split    = story_stripped.split()
