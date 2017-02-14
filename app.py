@@ -38,8 +38,9 @@ def generate_sentence(num):
 
 if __name__ == '__main__':
     #uncomment to run on heroku
-    port = int(process.env.PORT)
-    app.run(host='0.0.0.0', port=port)
+    # port = int(os.environ.get('PORT', 5000))
+    # app.run(host='0.0.0.0', port=port)
+    app.run(debug=True, port=33507)
 
     # uncomment to run locally
     # app.run()
