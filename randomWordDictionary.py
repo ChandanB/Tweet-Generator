@@ -17,15 +17,15 @@ def get_word():
 
 #10
 def get_sentence(count):
-    for i in range(1, count):
+    for i in range(count):
         new_word = get_word()
         word = new_word.strip()
         sentence.append(word)
-    return sentence
+    full_sentence = ' '.join(sentence)
+    return full_sentence
 
 if __name__ == '__main__':
     count = int(user_input)
-    random_sentence = get_sentence(user_input)
-    full_sentence = random_sentence + "."
-    print full_sentence
+    random_sentence = get_sentence(count)
+    print random_sentence
     print (" ")
