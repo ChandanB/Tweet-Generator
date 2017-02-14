@@ -4,7 +4,7 @@ import sys
 from flask import Flask
 app = Flask(__name__)
 
-words_file = open('/usr/share/dict/words')
+words_file = open('Bible.txt')
 words_list = words_file.readlines()
 user_input = sys.argv[1]
 sentence   = []
