@@ -6,6 +6,7 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
+def generate_word():
     word = get_word()
     return '''
     <html>
@@ -19,6 +20,7 @@ app = Flask(__name__)
     '''
 
 @app.route('/<int:num>')
+def generate_sentence(num):
     sentence = get_sentence(num)
     return '''
     <html>
