@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def random_word():
-    word = get_word()
+    word = random_word()
     return '''
     <!doctype html>
     <html>
