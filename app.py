@@ -1,6 +1,7 @@
 from randomWordDictionary import get_sentence
 from randomWordDictionary import get_word
 from flask import Flask
+import os
 
 
 app = Flask(__name__)
@@ -34,4 +35,9 @@ def generate_sentence(num):
     '''
 
 if __name__ == '__main__':
-    app.run()
+    #uncomment to run on heroku
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
+    # uncomment to run locally
+    # app.run()
