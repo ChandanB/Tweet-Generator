@@ -1,11 +1,15 @@
 import random
 import sys
+import string
 
 from flask import Flask
 app = Flask(__name__)
 
 words_file = open('Bible.txt')
-words_list = words_file.readlines()
+story = str(words_file.read())
+story_stripped = story.translate(None, string.punctuation)
+words_list = story_stripped.split()
+print words_list
 user_input = sys.argv[1]
 sentence   = []
 
